@@ -231,5 +231,18 @@ public class MusicOrganizer
         System.out.println("The sum of values from 1 to 10 is: " + sum);
     }
         
-    
+    32) public int sum(int a, int b) {
+        int total = 0; 
+        int start = Math.min(a, b); 
+        int end = Math.max(a, b); 
+
+       
+        while (start <= end) {
+            total += start; 
+            start++; 
+        }
+
+        return total; 
+    }
+
  */
