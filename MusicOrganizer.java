@@ -58,7 +58,9 @@ public class MusicOrganizer
     public void listAllFiles()
     {
         for(String filename : files) {
-            System.out.println(filename);
+            int position = 0;
+            System.out.println(position + ":"+ filename);
+            position++;
         }
     }
     
@@ -131,4 +133,103 @@ public class MusicOrganizer
         }
         return valid;
     }
+    
+    public void listMatching(String searchString)
+    {
+        boolean foundMatch = false;
+    for(String filename : files) {
+        if(filename.contains(searchString)) {
+            System.out.println(filename);
+            foundMatch = true;
+              } 
+        }
+        if (!foundMatch) {
+            System.out.println("No files matched the search string:" + searchString);
+        }
+
+    }
+    
+    public void sumFromOneToTen() { 
+            int sum = 0;
+            int number = 1;
+            
+            while (number <= 10) {
+                sum += number;
+                number++;
+            }
+        System.out.println("The sum of values from 1 to 10 is: " + sum);
+    }
+    
+    public void mulipleOfFive(){
+             int number = 10; 
+             while (number <= 95){
+                     System.out.println(number);
+                     number += 5;
+             }
+     }
 }
+
+/*
+ * 24) public void listAllFiles()
+    {
+        for(String filename : files) {
+            int position = 0;
+            System.out.println(position + ":"+ filename);
+            position++;
+        }
+    }
+   
+    25) public void listMatching(String searchString)
+    {
+    for(String filename : files) {
+        if(filename.contains(searchString)) {
+            System.out.println(filename);
+              } 
+        }
+    }
+    Nothing gets printed if the string that is entered isnt one of the files
+    in the music organizer
+    
+    26) public void listMatching(String searchString)
+    {
+        boolean foundMatch = false;
+    for(String filename : files) {
+        if(filename.contains(searchString)) {
+            System.out.println(filename);
+            foundMatch = true;
+              } 
+        }
+        if (!foundMatch) {
+            System.out.println("No files matched the search string:" + searchString);
+        }
+
+    }
+   
+    29) boolean found = false;
+        while(!found) {
+            if(the keys are in the next place) {
+                found = true
+            }
+       }
+    
+     30) public void mulipleOfFive(){
+             int number = 10; 
+             while (number <= 95){
+                     System.out.println(number);
+                     number += 5;
+             }
+     }
+   
+     31) public void sumFromOneToTen() { 
+            int sum = 0;
+            int number = 1;
+            
+            while (number <= 10) {
+                sum += number;
+                number++;
+            }
+        System.out.println("The sum of values from 1 to 10 is: " + sum);
+    }
+        
+    
+ */
